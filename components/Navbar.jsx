@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CiSquarePlus } from "react-icons/ci";
 
 export default function Navbar() {
     return (
@@ -13,7 +14,7 @@ export default function Navbar() {
                 href={'/addtopic'}
                 className="bg-blue-500 text-white px-4 py-2 rounded-md font-medium hover:bg-blue-400 transition"
             >
-                ADD TOPIC
+                <CiSquarePlus  size={25}/>
             </Link>
         </nav>
     );
