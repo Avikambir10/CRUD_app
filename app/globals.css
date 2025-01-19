@@ -1,4 +1,10 @@
+/* styles/globals.css or tailwind.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Your custom styles can go below */
+body {
+  font-family: 'Inter', sans-serif; /* Custom font or Tailwind font family */
+  background-color: #111111; /* A custom background */
+}

@@ -13,19 +13,23 @@ const getTopicById = async (id) => {
     return await res.json();
   } catch (error) {
     console.error("Error fetching topic:", error);
-    return null; // Return `null` if fetching fails
+    return null; // Return null if the fetch fails
   }
 };
 
-export default async function EditTopic(context) {
-  // Ensure params is awaited if needed
-  const { params } = await context; // Explicitly await context if required
+export default async function EditTopic({ params }) {
   const { id } = params;
 
+  // Loading state
   const topicData = await getTopicById(id);
 
   if (!topicData || !topicData.topic) {
-    return <div>Error loading topic. Please try again later.</div>;
+    return (
+      <div className="text-white p-6 text-center bg-black rounded-lg shadow-md">
+        <h2 className="text-2xl font-semibold">Error loading topic.</h2>
+        <p>Please try again later.</p>
+      </div>
+    );
   }
 
   const { title, description } = topicData.topic;

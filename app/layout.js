@@ -21,8 +21,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-gray-100`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('https://www.transparenttextures.com/patterns/asfalt.png')] text-gray-100 font-[var(--font-geist-sans)]`}
       >
+
         <div className="max-w-4xl mx-auto p-6 min-h-screen">
           <Navbar />
           <div className="mt-8">{children}</div>
